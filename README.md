@@ -340,11 +340,11 @@
         </div>
       </a>
 
-      <a class="nav-card" href="https://github.com/user-attachments/files/32280547/frp_0.71.0_windows_amd64.zip" target="_blank">
+      <a class="nav-card" href="https://github.com/Dzw1988/FRPzip/blob/main/frp_0.71.0_windows_amd64.rar" target="_blank">
         <div class="icon-badge">💾</div>
         <div class="card-content">
           <div class="card-title">自用frp仓库 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/user-attachments</div>
+          <div class="card-link">github.com/Dzw1988/FRPzip</div>
         </div>
       </a>
 
@@ -518,3 +518,4 @@
   </script>
 </body>
 </html>
+```[cite: 1]
