@@ -412,6 +412,14 @@
     <!-- 📦 其他下载与检测工具 -->
     <h2 class="section-title">📦 其他下载与检测工具</h2>
     <div class="grid">
+      <a class="nav-card" href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+        <div class="icon-badge">🌐</div>
+        <div class="card-content">
+          <div class="card-title">Microsoft Edge 国内官方下载 <span class="arrow-icon">↗</span></div>
+          <div class="card-link">microsoft.com/zh-cn/edge</div>
+        </div>
+      </a>
+
       <a class="nav-card" href="https://gemini.google/desktop" target="_blank">
         <div class="icon-badge">✨</div>
         <div class="card-content">
@@ -500,29 +508,4 @@
 
   <script>
     function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    }
-
-    function filterLinks() {
-      const input = document.getElementById('searchInput');
-      const filter = input.value.toLowerCase();
-      const cards = document.getElementsByClassName('nav-card');
-
-      for (let i = 0; i < cards.length; i++) {
-        const title = cards[i].querySelector('.card-title').innerText;
-        const link = cards[i].querySelector('.card-link').innerText;
-        if (title.toLowerCase().indexOf(filter) > -1 || link.toLowerCase().indexOf(filter) > -1) {
-          cards[i].style.display = "flex";
-        } else {
-          cards[i].style.display = "none";
-        }
-      }
-    }
-  </script>
-</body>
-</html>
+      const currentTheme = document.
