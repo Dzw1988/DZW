@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的常用软件与网站导航-笑笑</title>
+  <title>我的常用软件与网站导航</title>
   <style>
     :root {
       --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -219,7 +219,7 @@
     <header>
       <div class="header-title">
         <span style="font-size: 2rem;">🚀</span>
-        <h1>我的常用软件与网站导航-笑笑</h1>
+        <h1>我的常用软件与网站导航</h1>
       </div>
       <div class="controls">
         <div class="search-box">
@@ -415,7 +415,7 @@
       <a class="nav-card" href="https://www.microsoft.com/zh-cn/edge" target="_blank">
         <div class="icon-badge">🌐</div>
         <div class="card-content">
-          <div class="card-title">Microsoft Edge 国内官方下载 <span class="arrow-icon">↗</span></div>
+          <div class="card-title">Microsoft Edge 官方下载 <span class="arrow-icon">↗</span></div>
           <div class="card-link">microsoft.com/zh-cn/edge</div>
         </div>
       </a>
@@ -502,44 +502,47 @@
     </div>
 
     <footer>
-      <p>常用软件与网站导航-笑笑 · 点击任意卡片即可在新标签页中打开</p>
+      <p>常用软件与网站导航 · 点击任意卡片即可在新标签页中打开</p>
     </footer>
   </div>
 
   <script>
     function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute("data-theme");
+      const body = document.body;
+      const currentTheme = body.getAttribute("data-theme");
       if (currentTheme === "dark") {
-        html.removeAttribute("data-theme");
+        body.removeAttribute("data-theme");
         localStorage.setItem("theme", "light");
       } else {
-        html.setAttribute("data-theme", "dark");
+        body.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
       }
-    }
-
-    // 初始化主题
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
     }
 
     function filterLinks() {
       const input = document.getElementById('searchInput');
       const filter = input.value.toLowerCase();
       const cards = document.querySelectorAll('.nav-card');
-      
+      const sections = document.querySelectorAll('.section-title');
+
       cards.forEach(card => {
         const title = card.querySelector('.card-title').textContent.toLowerCase();
         const link = card.querySelector('.card-link').textContent.toLowerCase();
         if (title.includes(filter) || link.includes(filter)) {
-          card.style.display = '';
+          card.style.display = "";
         } else {
-          card.style.display = 'none';
+          card.style.display = "none";
         }
       });
     }
+
+    // 初始化时加载主题偏好
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.setAttribute("data-theme", "dark");
+      }
+    });
   </script>
 </body>
 </html>
