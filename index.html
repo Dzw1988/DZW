@@ -26,7 +26,7 @@
       --accent: #60a5fa;
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
       --shadow-hover: 0 10px 20px -3px rgba(96, 165, 250, 0.2);
-      --badge-bg: #1e293b;
+      --badge-bg: #0f172a;
     }
 
     * {
@@ -158,6 +158,20 @@
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
+      overflow: hidden;
+    }
+
+    /* 官方图标图片样式 */
+    .icon-badge img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-card:hover .icon-badge img {
+      transform: scale(1.1);
     }
 
     .card-content {
@@ -230,316 +244,323 @@
     </header>
 
     <!-- 🌐 官方与节点、云服务 -->
-    <h2 class="section-title">🌐 官方与节点、云服务</h2>
-    <div class="grid">
-      <a class="nav-card" href="https://minepi.com/" target="_blank">
-        <div class="icon-badge">🌐</div>
-        <div class="card-content">
-          <div class="card-title">Pi Network官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">minepi.com</div>
-        </div>
-      </a>
+    <div class="category-group">
+      <h2 class="section-title">🌐 官方与节点、云服务</h2>
+      <div class="grid">
+        <a class="nav-card" href="https://minepi.com/" target="_blank">
+          <div class="icon-badge">🌐</div>
+          <div class="card-content">
+            <div class="card-title">Pi Network官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">minepi.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/pi-node/pi-node/releases" target="_blank">
-        <div class="icon-badge">📦</div>
-        <div class="card-content">
-          <div class="card-title">Pi Network节点下载 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/pi-node</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/pi-node/pi-node/releases" target="_blank">
+          <div class="icon-badge">📦</div>
+          <div class="card-content">
+            <div class="card-title">Pi Network节点下载 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/pi-node</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="http://www.123pan.com/" target="_blank">
-        <div class="icon-badge">📁</div>
-        <div class="card-content">
-          <div class="card-title">123云盘官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">123pan.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="http://www.123pan.com/" target="_blank">
+          <div class="icon-badge">📁</div>
+          <div class="card-content">
+            <div class="card-title">123云盘官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">123pan.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://my.racknerd.com/" target="_blank">
-        <div class="icon-badge">☁️</div>
-        <div class="card-content">
-          <div class="card-title">racknerd云服购买平台 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">my.racknerd.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://my.racknerd.com/" target="_blank">
+          <div class="icon-badge">☁️</div>
+          <div class="card-content">
+            <div class="card-title">racknerd云服购买平台 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">my.racknerd.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.aliyun.com/" target="_blank">
-        <div class="icon-badge">☁️</div>
-        <div class="card-content">
-          <div class="card-title">阿里云云服官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">aliyun.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.aliyun.com/" target="_blank">
+          <div class="icon-badge">☁️</div>
+          <div class="card-content">
+            <div class="card-title">阿里云云服官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">aliyun.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://cloud.tencent.com/" target="_blank">
-        <div class="icon-badge">☁️</div>
-        <div class="card-content">
-          <div class="card-title">腾讯云服官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">cloud.tencent.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://cloud.tencent.com/" target="_blank">
+          <div class="icon-badge">☁️</div>
+          <div class="card-content">
+            <div class="card-title">腾讯云服官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">cloud.tencent.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://docs.docker.com/desktop/release-notes/" target="_blank">
-        <div class="icon-badge">🐳</div>
-        <div class="card-content">
-          <div class="card-title">docker官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">docs.docker.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://docs.docker.com/desktop/release-notes/" target="_blank">
+          <div class="icon-badge">🐳</div>
+          <div class="card-content">
+            <div class="card-title">docker官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">docs.docker.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/dashboard" target="_blank">
-        <div class="icon-badge">🐈</div>
-        <div class="card-content">
-          <div class="card-title">黑猫开源官网 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/dashboard</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/dashboard" target="_blank">
+          <div class="icon-badge">🐈</div>
+          <div class="card-content">
+            <div class="card-title">黑猫开源官网 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/dashboard</div>
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- 🛠️ 代理与科学上网工具 -->
-    <h2 class="section-title">🛠️ 代理与科学上网工具</h2>
-    <div class="grid">
-      <a class="nav-card" href="https://github.com/2dust/v2rayN/releases" target="_blank">
-        <div class="icon-badge">🚀</div>
-        <div class="card-content">
-          <div class="card-title">v2rayN官方开源 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/2dust/v2rayN</div>
-        </div>
-      </a>
+    <div class="category-group">
+      <h2 class="section-title">🛠️ 代理与科学上网工具</h2>
+      <div class="grid">
+        <a class="nav-card" href="https://github.com/2dust/v2rayN/releases" target="_blank">
+          <div class="icon-badge">🚀</div>
+          <div class="card-content">
+            <div class="card-title">v2rayN官方开源 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/2dust/v2rayN</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/KaringX/karing/releases" target="_blank">
-        <div class="icon-badge">🛠️</div>
-        <div class="card-content">
-          <div class="card-title">Karing官方开源 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/KaringX/karing</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/KaringX/karing/releases" target="_blank">
+          <div class="icon-badge">🛠️</div>
+          <div class="card-content">
+            <div class="card-title">Karing官方开源 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/KaringX/karing</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/clash-verge-rev/clash-verge-rev/releases" target="_blank">
-        <div class="icon-badge">✈️</div>
-        <div class="card-content">
-          <div class="card-title">Clash Verge官方网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/clash-verge-rev</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/clash-verge-rev/clash-verge-rev/releases" target="_blank">
+          <div class="icon-badge">✈️</div>
+          <div class="card-content">
+            <div class="card-title">Clash Verge官方网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/clash-verge-rev</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" target="_blank">
-        <div class="icon-badge">📱</div>
-        <div class="card-content">
-          <div class="card-title">ClashMeta官方安卓版 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/MetaCubeX</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" target="_blank">
+          <div class="icon-badge">📱</div>
+          <div class="card-content">
+            <div class="card-title">ClashMeta官方安卓版 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/MetaCubeX</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/mihomo-party-org/clash-party/releases" target="_blank">
-        <div class="icon-badge">🎉</div>
-        <div class="card-content">
-          <div class="card-title">mihomo-party官方开源 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/mihomo-party-org</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/mihomo-party-org/clash-party/releases" target="_blank">
+          <div class="icon-badge">🎉</div>
+          <div class="card-content">
+            <div class="card-title">mihomo-party官方开源 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/mihomo-party-org</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/SagerNet/sing-box/releases" target="_blank">
-        <div class="icon-badge">📦</div>
-        <div class="card-content">
-          <div class="card-title">SingBox官方开源 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/SagerNet/sing-box</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/SagerNet/sing-box/releases" target="_blank">
+          <div class="icon-badge">📦</div>
+          <div class="card-content">
+            <div class="card-title">SingBox官方开源 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/SagerNet/sing-box</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/fatedier/frp/releases" target="_blank">
-        <div class="icon-badge">🔗</div>
-        <div class="card-content">
-          <div class="card-title">frp官方开源 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/fatedier/frp</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/fatedier/frp/releases" target="_blank">
+          <div class="icon-badge">🔗</div>
+          <div class="card-content">
+            <div class="card-title">frp官方开源 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/fatedier/frp</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/user-attachments/files/32280547/frp_0.71.0_windows_amd64.zip" target="_blank">
-        <div class="icon-badge">💾</div>
-        <div class="card-content">
-          <div class="card-title">自用frp仓库 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/user-attachments</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/user-attachments/files/32280547/frp_0.71.0_windows_amd64.zip" target="_blank">
+          <div class="icon-badge">💾</div>
+          <div class="card-content">
+            <div class="card-title">自用frp仓库 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/user-attachments</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/ehang-io/nps/releases/" target="_blank">
-        <div class="icon-badge">🌐</div>
-        <div class="card-content">
-          <div class="card-title">NPS官方开源下载地址 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/ehang-io/nps</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/ehang-io/nps/releases/" target="_blank">
+          <div class="icon-badge">🌐</div>
+          <div class="card-content">
+            <div class="card-title">NPS官方开源下载地址 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/ehang-io/nps</div>
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- 💻 远程与运维 -->
-    <h2 class="section-title">💻 远程与运维</h2>
-    <div class="grid">
-      <a class="nav-card" href="https://www.hostbuf.com/" target="_blank">
-        <div class="icon-badge">💻</div>
-        <div class="card-content">
-          <div class="card-title">finalshell官方 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">hostbuf.com</div>
-        </div>
-      </a>
+    <div class="category-group">
+      <h2 class="section-title">💻 远程与运维</h2>
+      <div class="grid">
+        <a class="nav-card" href="https://www.hostbuf.com/" target="_blank">
+          <div class="icon-badge">💻</div>
+          <div class="card-content">
+            <div class="card-title">finalshell官方 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">hostbuf.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.todesk.com/" target="_blank">
-        <div class="icon-badge">🖥️</div>
-        <div class="card-content">
-          <div class="card-title">ToDesk远程 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">todesk.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.todesk.com/" target="_blank">
+          <div class="icon-badge">🖥️</div>
+          <div class="card-content">
+            <div class="card-title">ToDesk远程 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">todesk.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.deskin.io/zht" target="_blank">
-        <div class="icon-badge">🖥️</div>
-        <div class="card-content">
-          <div class="card-title">deskin远程官方 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">deskin.io</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.deskin.io/zht" target="_blank">
+          <div class="icon-badge">🖥️</div>
+          <div class="card-content">
+            <div class="card-title">deskin远程官方 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">deskin.io</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://sunlogin.oray.com" target="_blank">
-        <div class="icon-badge">🌻</div>
-        <div class="card-content">
-          <div class="card-title">向日葵远程 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">sunlogin.oray.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://sunlogin.oray.com" target="_blank">
+          <div class="icon-badge">🌻</div>
+          <div class="card-content">
+            <div class="card-title">向日葵远程 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">sunlogin.oray.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://uuyc.163.com/" target="_blank">
-        <div class="icon-badge">🎮</div>
-        <div class="card-content">
-          <div class="card-title">UU远程 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">uuyc.163.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://uuyc.163.com/" target="_blank">
+          <div class="icon-badge">🎮</div>
+          <div class="card-content">
+            <div class="card-title">UU远程 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">uuyc.163.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.raylink.live" target="_blank">
-        <div class="icon-badge">⚡</div>
-        <div class="card-content">
-          <div class="card-title">RayLink远程控制软件 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">raylink.live</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.raylink.live" target="_blank">
+          <div class="icon-badge">⚡</div>
+          <div class="card-content">
+            <div class="card-title">RayLink远程控制软件 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">raylink.live</div>
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- 📦 其他下载与检测工具 -->
-    <h2 class="section-title">📦 其他下载与检测工具</h2>
-    <div class="grid">
-      <!-- 新增的镜像下载网站 -->
-      <a class="nav-card" href="https://next.itellyou.cn/" target="_blank">
-        <div class="icon-badge">📥</div>
-        <div class="card-content">
-          <div class="card-title">镜像下载网站 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">next.itellyou.cn</div>
-        </div>
-      </a>
+    <div class="category-group">
+      <h2 class="section-title">📦 其他下载与检测工具</h2>
+      <div class="grid">
+        <a class="nav-card" href="https://next.itellyou.cn/" target="_blank">
+          <div class="icon-badge">📥</div>
+          <div class="card-content">
+            <div class="card-title">镜像下载网站 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">next.itellyou.cn</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://youtu.be/OJEesoTq" target="_blank">
-        <div class="icon-badge">📺</div>
-        <div class="card-content">
-          <div class="card-title">YouTube 视频链接 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">youtu.be/OJEesoTq</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://youtu.be/OJEesoTq" target="_blank">
+          <div class="icon-badge">📺</div>
+          <div class="card-content">
+            <div class="card-title">YouTube 视频链接 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">youtu.be/OJEesoTq</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.google.com/" target="_blank">
-        <div class="icon-badge">🔍</div>
-        <div class="card-content">
-          <div class="card-title">谷歌浏览器 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">google.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.google.com/" target="_blank">
+          <div class="icon-badge">🔍</div>
+          <div class="card-content">
+            <div class="card-title">谷歌浏览器 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">google.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.microsoft.com/zh-cn/edge" target="_blank">
-        <div class="icon-badge">🌐</div>
-        <div class="card-content">
-          <div class="card-title">Microsoft Edge 官方下载 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">microsoft.com/zh-cn/edge</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+          <div class="icon-badge">🌐</div>
+          <div class="card-content">
+            <div class="card-title">Microsoft Edge 官方下载 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">microsoft.com/zh-cn/edge</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://gemini.google/desktop" target="_blank">
-        <div class="icon-badge">✨</div>
-        <div class="card-content">
-          <div class="card-title">Gemini 官方桌面安装包 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">gemini.google/desktop</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://gemini.google/desktop" target="_blank">
+          <div class="icon-badge">✨</div>
+          <div class="card-content">
+            <div class="card-title">Gemini 官方桌面安装包 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">gemini.google/desktop</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://apkpure.com/" target="_blank">
-        <div class="icon-badge">📲</div>
-        <div class="card-content">
-          <div class="card-title">手机app下载平台 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">apkpure.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://apkpure.com/" target="_blank">
+          <div class="icon-badge">📲</div>
+          <div class="card-content">
+            <div class="card-title">手机app下载平台 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">apkpure.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/microsoft/WSL/releases" target="_blank">
-        <div class="icon-badge">🐧</div>
-        <div class="card-content">
-          <div class="card-title">WSL2下载地址 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/microsoft/WSL</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/microsoft/WSL/releases" target="_blank">
+          <div class="icon-badge">🐧</div>
+          <div class="card-content">
+            <div class="card-title">WSL2下载地址 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/microsoft/WSL</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://openvpn.net/downloads/openvpn-connect-v3-windows.msi" target="_blank">
-        <div class="icon-badge">🔒</div>
-        <div class="card-content">
-          <div class="card-title">OpenVPN 官方安装包 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">openvpn.net</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://openvpn.net/downloads/openvpn-connect-v3-windows.msi" target="_blank">
+          <div class="icon-badge">🔒</div>
+          <div class="card-content">
+            <div class="card-title">OpenVPN 官方安装包 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">openvpn.net</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://swupdate.openvpn.org/community/releases/OpenVPN-2.7.7-I001-amd64.msi" target="_blank">
-        <div class="icon-badge">🔓</div>
-        <div class="card-content">
-          <div class="card-title">OpenVPN 社区GUI版 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">swupdate.openvpn.org</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://swupdate.openvpn.org/community/releases/OpenVPN-2.7.7-I001-amd64.msi" target="_blank">
+          <div class="icon-badge">🔓</div>
+          <div class="card-content">
+            <div class="card-title">OpenVPN 社区GUI版 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">swupdate.openvpn.org</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://github.com/lmc999/auto-add-routes" target="_blank">
-        <div class="icon-badge">🗺️</div>
-        <div class="card-content">
-          <div class="card-title">openvpn分流路由表 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">github.com/lmc999</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://github.com/lmc999/auto-add-routes" target="_blank">
+          <div class="icon-badge">🗺️</div>
+          <div class="card-content">
+            <div class="card-title">openvpn分流路由表 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">github.com/lmc999</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://www.wireguard.com/install/" target="_blank">
-        <div class="icon-badge">🛡️</div>
-        <div class="card-content">
-          <div class="card-title">wireguard官方 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">wireguard.com</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://www.wireguard.com/install/" target="_blank">
+          <div class="icon-badge">🛡️</div>
+          <div class="card-content">
+            <div class="card-title">wireguard官方 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">wireguard.com</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://ip.skk.moe/" target="_blank">
-        <div class="icon-badge">🔍</div>
-        <div class="card-content">
-          <div class="card-title">查分流 <span class="arrow-icon">↗</span></div>
-          <div class="card-link">ip.skk.moe</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://ip.skk.moe/" target="_blank">
+          <div class="icon-badge">🔍</div>
+          <div class="card-content">
+            <div class="card-title">查分流 <span class="arrow-icon">↗</span></div>
+            <div class="card-link">ip.skk.moe</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://ping0.cc/" target="_blank">
-        <div class="icon-badge">📊</div>
-        <div class="card-content">
-          <div class="card-title">检测 IP 质量 (ping0) <span class="arrow-icon">↗</span></div>
-          <div class="card-link">ping0.cc</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://ping0.cc/" target="_blank">
+          <div class="icon-badge">📊</div>
+          <div class="card-content">
+            <div class="card-title">检测 IP 质量 (ping0) <span class="arrow-icon">↗</span></div>
+            <div class="card-link">ping0.cc</div>
+          </div>
+        </a>
 
-      <a class="nav-card" href="https://ipdata.co/" target="_blank">
-        <div class="icon-badge">📡</div>
-        <div class="card-content">
-          <div class="card-title">检测 IP 质量 (ipdata) <span class="arrow-icon">↗</span></div>
-          <div class="card-link">ipdata.co</div>
-        </div>
-      </a>
+        <a class="nav-card" href="https://ipdata.co/" target="_blank">
+          <div class="icon-badge">📡</div>
+          <div class="card-content">
+            <div class="card-title">检测 IP 质量 (ipdata) <span class="arrow-icon">↗</span></div>
+            <div class="card-link">ipdata.co</div>
+          </div>
+        </a>
+      </div>
     </div>
 
     <footer>
@@ -563,26 +584,79 @@
     function filterLinks() {
       const input = document.getElementById('searchInput');
       const filter = input.value.toLowerCase();
+      const groups = document.querySelectorAll('.category-group');
+
+      groups.forEach(group => {
+        const cards = group.querySelectorAll('.nav-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const link = card.querySelector('.card-link').textContent.toLowerCase();
+          if (title.includes(filter) || link.includes(filter)) {
+            card.style.display = "";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // 如果该分类下没有匹配的卡片，隐藏整个分类标题
+        group.style.display = visibleCount > 0 ? "" : "none";
+      });
+    }
+
+    // 自动加载网站官方 Favicon，失败时回退到原本的 Emoji
+    function loadOfficialFavicons() {
       const cards = document.querySelectorAll('.nav-card');
-      const sections = document.querySelectorAll('.section-title');
 
       cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const link = card.querySelector('.card-link').textContent.toLowerCase();
-        if (title.includes(filter) || link.includes(filter)) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
+        const href = card.getAttribute('href');
+        const badge = card.querySelector('.icon-badge');
+        if (!href || !badge) return;
+
+        try {
+          const urlObj = new URL(href);
+          let domain = urlObj.hostname;
+
+          // 针对短链或子域名做特殊映射，确保获取到最准确的品牌主图标
+          if (domain === 'youtu.be') domain = 'youtube.com';
+          if (domain === 'swupdate.openvpn.org') domain = 'openvpn.net';
+
+          const fallbackEmoji = badge.textContent.trim();
+          const img = document.createElement('img');
+          
+          // 使用高清 Favicon 聚合服务（支持国内外快速访问）
+          img.src = `https://favicon.im/${domain}?larger=true`;
+          img.alt = domain;
+          img.loading = 'lazy';
+
+          // 图标加载成功：替换掉 Emoji
+          img.onload = () => {
+            // 部分接口在找不到图标时会返回 1x1 像素的透明图，过滤掉这种情况
+            if (img.naturalWidth > 1 && img.naturalHeight > 1) {
+              badge.innerHTML = '';
+              badge.appendChild(img);
+            }
+          };
+
+          // 图标加载失败（如无网或接口超时）：保留原本的 Emoji 不变
+          img.onerror = () => {
+            badge.textContent = fallbackEmoji;
+          };
+        } catch (e) {
+          // 链接解析异常时保持原样
         }
       });
     }
 
-    // 初始化时加载主题偏好
+    // 页面初始化
     window.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme === "dark") {
         document.body.setAttribute("data-theme", "dark");
       }
+      loadOfficialFavicons();
     });
   </script>
 </body>
