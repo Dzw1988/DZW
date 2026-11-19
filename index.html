@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的常用软件与网站导航</title>
+  <title>笑笑派工作室网站导航</title>
   <style>
     :root {
       --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -233,7 +233,7 @@
     <header>
       <div class="header-title">
         <span style="font-size: 2rem;">🚀</span>
-        <h1>我的常用软件与网站导航</h1>
+        <h1>笑笑派工作室网站导航</h1>
       </div>
       <div class="controls">
         <div class="search-box">
@@ -561,103 +561,3 @@
           </div>
         </a>
       </div>
-    </div>
-
-    <footer>
-      <p>常用软件与网站导航 · 点击任意卡片即可在新标签页中打开</p>
-    </footer>
-  </div>
-
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const currentTheme = body.getAttribute("data-theme");
-      if (currentTheme === "dark") {
-        body.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        body.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    }
-
-    function filterLinks() {
-      const input = document.getElementById('searchInput');
-      const filter = input.value.toLowerCase();
-      const groups = document.querySelectorAll('.category-group');
-
-      groups.forEach(group => {
-        const cards = group.querySelectorAll('.nav-card');
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-          const title = card.querySelector('.card-title').textContent.toLowerCase();
-          const link = card.querySelector('.card-link').textContent.toLowerCase();
-          if (title.includes(filter) || link.includes(filter)) {
-            card.style.display = "";
-            visibleCount++;
-          } else {
-            card.style.display = "none";
-          }
-        });
-
-        // 如果该分类下没有匹配的卡片，隐藏整个分类标题
-        group.style.display = visibleCount > 0 ? "" : "none";
-      });
-    }
-
-    // 自动加载网站官方 Favicon，失败时回退到原本的 Emoji
-    function loadOfficialFavicons() {
-      const cards = document.querySelectorAll('.nav-card');
-
-      cards.forEach(card => {
-        const href = card.getAttribute('href');
-        const badge = card.querySelector('.icon-badge');
-        if (!href || !badge) return;
-
-        try {
-          const urlObj = new URL(href);
-          let domain = urlObj.hostname;
-
-          // 针对短链或子域名做特殊映射，确保获取到最准确的品牌主图标
-          if (domain === 'youtu.be') domain = 'youtube.com';
-          if (domain === 'swupdate.openvpn.org') domain = 'openvpn.net';
-
-          const fallbackEmoji = badge.textContent.trim();
-          const img = document.createElement('img');
-          
-          // 使用高清 Favicon 聚合服务（支持国内外快速访问）
-          img.src = `https://favicon.im/${domain}?larger=true`;
-          img.alt = domain;
-          img.loading = 'lazy';
-
-          // 图标加载成功：替换掉 Emoji
-          img.onload = () => {
-            // 部分接口在找不到图标时会返回 1x1 像素的透明图，过滤掉这种情况
-            if (img.naturalWidth > 1 && img.naturalHeight > 1) {
-              badge.innerHTML = '';
-              badge.appendChild(img);
-            }
-          };
-
-          // 图标加载失败（如无网或接口超时）：保留原本的 Emoji 不变
-          img.onerror = () => {
-            badge.textContent = fallbackEmoji;
-          };
-        } catch (e) {
-          // 链接解析异常时保持原样
-        }
-      });
-    }
-
-    // 页面初始化
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "dark") {
-        document.body.setAttribute("data-theme", "dark");
-      }
-      loadOfficialFavicons();
-    });
-  </script>
-</body>
-</html>
